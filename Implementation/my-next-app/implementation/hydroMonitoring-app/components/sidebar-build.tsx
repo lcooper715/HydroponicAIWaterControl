@@ -26,6 +26,8 @@ import {
     Waves,
 } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+import { User } from "lucide-react";
 
 // Desktop-only round handle on the right edge of the sidebar
 function DesktopSidebarHandle() {
@@ -54,20 +56,17 @@ function DesktopSidebarHandle() {
     )
 }
 
-export function AppSidebar() {
+export default function SidebarBuild() {
     const pathname = usePathname()
     const { state } = useSidebar()
     const isCollapsed = state === "collapsed"
 
     const navItems = [
-        { icon: Home, label: "Overview", href: "/" },
+        { icon: Home, label: "Home", href: "/" },                 // this IS your dashboard
         { icon: LineChart, label: "Analytics", href: "/analytics" },
-        { icon: Droplets, label: "Water Quality", href: "/water-quality" }, // pH / EC / ORP
-        { icon: Thermometer, label: "Temperature", href: "/temperature" },
-        { icon: Activity, label: "Sensors", href: "/sensors" },
         { icon: AlertTriangle, label: "Anomalies", href: "/anomalies" },
         { icon: Settings, label: "Settings", href: "/settings" },
-    ]
+    ];
 
     const isActive = (href: string) =>
         pathname === href || (href !== "/" && pathname?.startsWith(href + "/"))
@@ -77,22 +76,20 @@ export function AppSidebar() {
             collapsible="icon"
             className={cn(
                 "border-r border-sky-100",
-                "bg-gradient-to-b from-sky-50 via-white to-emerald-50",
+                "bg-gradient-to-b from-purple-50 via-white to-sky-50",
                 "text-slate-800",
             )}
         >
             <DesktopSidebarHandle />
 
-            <SidebarHeader className="flex items-center gap-3 px-3 py-4 group-data-[collapsible=icon]:items-center group-data-[collapsible=icon]:px-2">
-                {!isCollapsed && (
-                    <div className="space-y-0.5">
-                        <p className="text-sm font-semibold leading-tight text-slate-900">
-                            Hydroponics Water Monitor
-                        </p>
-                        <p className="text-xs text-slate-500">pH • EC • ORP • Temp</p>
-                    </div>
-                )}
+            <SidebarHeader className="px-3 py-3 group-data-[collapsible=icon]:px-2">
+                <div className="flex items-center justify-end">
+                    <SignedIn>
+                        <UserButton afterSignOutUrl="/" />
+                    </SignedIn>
+                </div>
             </SidebarHeader>
+
 
             <SidebarContent className="px-3 group-data-[collapsible=icon]:items-center group-data-[collapsible=icon]:px-2">
                 <SidebarMenu className="gap-1 group-data-[collapsible=icon]:items-center group-data-[collapsible=icon]:justify-center">
@@ -123,12 +120,25 @@ export function AppSidebar() {
                 </SidebarMenu>
             </SidebarContent>
 
-            <SidebarFooter className="px-3 py-4 group-data-[collapsible=icon]:items-center group-data-[collapsible=icon]:px-2">
-                <div className="flex items-center gap-2 rounded-lg border border-sky-100 bg-white/80 px-3 py-2 text-[11px] text-slate-600 shadow-sm">
-                    <Waves className="h-4 w-4 text-sky-500" />
-                    {!isCollapsed && <span>Stable water, healthy roots</span>}
+            <SidebarFooter className="px-3 py-4 space-y-3 group-data-[collapsible=icon]:items-center group-data-[collapsible=icon]:px-2">
+                <div className="rounded-lg border border-sky-100 bg-white/80 px-3 py-2 shadow-sm">
+                    <SignedOut>
+                        <SignInButton mode="modal">
+                            <button className="flex w-full items-center justify-center gap-2 rounded-md bg-emerald-400 px-3 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-purple-700">
+                                <User className="h-4 w-4" />
+                                {!isCollapsed && <span>Log in</span>}
+                            </button>
+                        </SignInButton>
+                    </SignedOut>
                 </div>
+
+                {!isCollapsed && (
+                    <div className="text-[11px] text-slate-500 px-1">
+                        Stable water, healthy roots
+                    </div>
+                )}
             </SidebarFooter>
+
 
             <SidebarRail className="hover:bg-white/5" />
         </Sidebar>
