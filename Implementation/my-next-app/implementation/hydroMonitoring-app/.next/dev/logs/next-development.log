@@ -1,0 +1,2 @@
+[00:00:00.975] Server  LOG     ✓ Ready in 808ms
+[00:00:12.942] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview

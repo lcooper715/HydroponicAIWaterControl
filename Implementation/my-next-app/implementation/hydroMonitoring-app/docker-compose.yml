@@ -1,0 +1,26 @@
+
+services:
+  questdb:
+    image: questdb/questdb:latest
+    ports:
+      - "9000:9000"
+      - "8812:8812"
+      - "9009:9009"
+    volumes:
+      - questdb-data:/var/lib/questdb
+
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      QUESTDB_HOST: questdb
+      QUESTDB_PG_PORT: 8812
+      QUESTDB_USER: admin
+      QUESTDB_PASSWORD: quest
+      QUESTDB_DATABASE: qdb
+    depends_on:
+      - questdb
+
+volumes:
+  questdb-data:

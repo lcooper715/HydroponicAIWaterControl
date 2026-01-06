@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///Users/lindsayleighcooper/Documents/GitHub/HydroponicAIWaterControl/Implementation/my-next-app/implementation/hydroMonitoring-app/app/globals.css"],"sourcesContent":["/* app/globals.css */\n@import \"tailwindcss\";\n/* Basic reset */\n* {\n    box-sizing: border-box;\n}\n\nhtml,\nbody {\n    padding: 0;\n    margin: 0;\n}\n\nbody {\n    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;\n    line-height: 1.5;\n}\n\n"],"names":[],"mappings":"AAGA;;;;AAIA;;;;;AAMA"}}]
+}
