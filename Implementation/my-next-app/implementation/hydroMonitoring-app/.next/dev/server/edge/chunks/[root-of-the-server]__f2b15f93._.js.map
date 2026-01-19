@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 16, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/middleware.ts"],"sourcesContent":["// middleware.ts\nimport { clerkMiddleware, createRouteMatcher } from \"@clerk/nextjs/server\";\n\n// Mark routes that should NOT require auth:\nconst isPublicRoute = createRouteMatcher([\n    \"/\",\n    \"/sign-in(.*)\",\n    \"/sign-up(.*)\",\n    \"/api/public(.*)\",\n]);\n\nexport default clerkMiddleware((auth, req) => {\n    if (!isPublicRoute(req)) {\n        auth.protect();\n    }\n});\n\n// Make sure middleware runs on app + api routes (and ignores static files)\nexport const config = {\n    matcher: [\n        \"/((?!.*\\\\..*|_next).*)\",\n        \"/\",\n        \"/(api|trpc)(.*)\",\n    ],\n};\n"],"names":[],"mappings":";;;;;;AAAA,gBAAgB;AAChB;AAAA;;AAEA,4CAA4C;AAC5C,MAAM,gBAAgB,IAAA,wMAAkB,EAAC;IACrC;IACA;IACA;IACA;CACH;uCAEc,IAAA,wMAAe,EAAC,CAAC,MAAM;IAClC,IAAI,CAAC,cAAc,MAAM;QACrB,KAAK,OAAO;IAChB;AACJ;AAGO,MAAM,SAAS;IAClB,SAAS;QACL;QACA;QACA;KACH;AACL"}}]
+}
