@@ -12,6 +12,17 @@ yarn dev
 pnpm dev
 # or
 bun dev
+# start Docker Container externally first.
+Docker / QuestDB 
+
+docker compose up --build
+
+pyton terminal line -- alias py="./.venv/bin/python3"-- py
+#ports: 
+#9000 --> UI, 
+#8812 --> Postgres wire,  
+#9009 --> ILP Influx line protocol
+
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

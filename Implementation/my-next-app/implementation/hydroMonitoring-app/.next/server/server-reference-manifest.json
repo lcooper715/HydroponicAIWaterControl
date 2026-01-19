@@ -8,8 +8,14 @@
           "exportedName": "detectKeylessEnvDriftAction",
           "filename": "node_modules/@clerk/nextjs/dist/esm/app-router/keyless-actions.js"
         },
-        "app/dashboard/page": {
-          "moduleId": 68719,
+        "app/analytics/page": {
+          "moduleId": 59365,
+          "async": false,
+          "exportedName": "detectKeylessEnvDriftAction",
+          "filename": "node_modules/@clerk/nextjs/dist/esm/app-router/keyless-actions.js"
+        },
+        "app/anomalies/page": {
+          "moduleId": 93638,
           "async": false,
           "exportedName": "detectKeylessEnvDriftAction",
           "filename": "node_modules/@clerk/nextjs/dist/esm/app-router/keyless-actions.js"
@@ -23,7 +29,8 @@
       },
       "layer": {
         "app/_not-found/page": "rsc",
-        "app/dashboard/page": "rsc",
+        "app/analytics/page": "rsc",
+        "app/anomalies/page": "rsc",
         "app/page": "rsc"
       },
       "filename": "node_modules/@clerk/nextjs/dist/esm/app-router/keyless-actions.js",
@@ -37,8 +44,14 @@
           "exportedName": "invalidateCacheAction",
           "filename": "node_modules/@clerk/nextjs/dist/esm/app-router/server-actions.js"
         },
-        "app/dashboard/page": {
-          "moduleId": 68719,
+        "app/analytics/page": {
+          "moduleId": 59365,
+          "async": false,
+          "exportedName": "invalidateCacheAction",
+          "filename": "node_modules/@clerk/nextjs/dist/esm/app-router/server-actions.js"
+        },
+        "app/anomalies/page": {
+          "moduleId": 93638,
           "async": false,
           "exportedName": "invalidateCacheAction",
           "filename": "node_modules/@clerk/nextjs/dist/esm/app-router/server-actions.js"
@@ -52,7 +65,8 @@
       },
       "layer": {
         "app/_not-found/page": "action-browser",
-        "app/dashboard/page": "action-browser",
+        "app/analytics/page": "action-browser",
+        "app/anomalies/page": "action-browser",
         "app/page": "action-browser"
       },
       "filename": "node_modules/@clerk/nextjs/dist/esm/app-router/server-actions.js",
@@ -66,8 +80,14 @@
           "exportedName": "createOrReadKeylessAction",
           "filename": "node_modules/@clerk/nextjs/dist/esm/app-router/keyless-actions.js"
         },
-        "app/dashboard/page": {
-          "moduleId": 68719,
+        "app/analytics/page": {
+          "moduleId": 59365,
+          "async": false,
+          "exportedName": "createOrReadKeylessAction",
+          "filename": "node_modules/@clerk/nextjs/dist/esm/app-router/keyless-actions.js"
+        },
+        "app/anomalies/page": {
+          "moduleId": 93638,
           "async": false,
           "exportedName": "createOrReadKeylessAction",
           "filename": "node_modules/@clerk/nextjs/dist/esm/app-router/keyless-actions.js"
@@ -81,7 +101,8 @@
       },
       "layer": {
         "app/_not-found/page": "rsc",
-        "app/dashboard/page": "rsc",
+        "app/analytics/page": "rsc",
+        "app/anomalies/page": "rsc",
         "app/page": "rsc"
       },
       "filename": "node_modules/@clerk/nextjs/dist/esm/app-router/keyless-actions.js",
@@ -95,8 +116,14 @@
           "exportedName": "collectKeylessMetadata",
           "filename": "node_modules/@clerk/nextjs/dist/esm/server/keyless-custom-headers.js"
         },
-        "app/dashboard/page": {
-          "moduleId": 68719,
+        "app/analytics/page": {
+          "moduleId": 59365,
+          "async": false,
+          "exportedName": "collectKeylessMetadata",
+          "filename": "node_modules/@clerk/nextjs/dist/esm/server/keyless-custom-headers.js"
+        },
+        "app/anomalies/page": {
+          "moduleId": 93638,
           "async": false,
           "exportedName": "collectKeylessMetadata",
           "filename": "node_modules/@clerk/nextjs/dist/esm/server/keyless-custom-headers.js"
@@ -110,7 +137,8 @@
       },
       "layer": {
         "app/_not-found/page": "rsc",
-        "app/dashboard/page": "rsc",
+        "app/analytics/page": "rsc",
+        "app/anomalies/page": "rsc",
         "app/page": "rsc"
       },
       "filename": "node_modules/@clerk/nextjs/dist/esm/server/keyless-custom-headers.js",
@@ -124,8 +152,14 @@
           "exportedName": "formatMetadataHeaders",
           "filename": "node_modules/@clerk/nextjs/dist/esm/server/keyless-custom-headers.js"
         },
-        "app/dashboard/page": {
-          "moduleId": 68719,
+        "app/analytics/page": {
+          "moduleId": 59365,
+          "async": false,
+          "exportedName": "formatMetadataHeaders",
+          "filename": "node_modules/@clerk/nextjs/dist/esm/server/keyless-custom-headers.js"
+        },
+        "app/anomalies/page": {
+          "moduleId": 93638,
           "async": false,
           "exportedName": "formatMetadataHeaders",
           "filename": "node_modules/@clerk/nextjs/dist/esm/server/keyless-custom-headers.js"
@@ -139,7 +173,8 @@
       },
       "layer": {
         "app/_not-found/page": "rsc",
-        "app/dashboard/page": "rsc",
+        "app/analytics/page": "rsc",
+        "app/anomalies/page": "rsc",
         "app/page": "rsc"
       },
       "filename": "node_modules/@clerk/nextjs/dist/esm/server/keyless-custom-headers.js",
@@ -153,8 +188,14 @@
           "exportedName": "deleteKeylessAction",
           "filename": "node_modules/@clerk/nextjs/dist/esm/app-router/keyless-actions.js"
         },
-        "app/dashboard/page": {
-          "moduleId": 68719,
+        "app/analytics/page": {
+          "moduleId": 59365,
+          "async": false,
+          "exportedName": "deleteKeylessAction",
+          "filename": "node_modules/@clerk/nextjs/dist/esm/app-router/keyless-actions.js"
+        },
+        "app/anomalies/page": {
+          "moduleId": 93638,
           "async": false,
           "exportedName": "deleteKeylessAction",
           "filename": "node_modules/@clerk/nextjs/dist/esm/app-router/keyless-actions.js"
@@ -168,7 +209,8 @@
       },
       "layer": {
         "app/_not-found/page": "action-browser",
-        "app/dashboard/page": "action-browser",
+        "app/analytics/page": "action-browser",
+        "app/anomalies/page": "action-browser",
         "app/page": "action-browser"
       },
       "filename": "node_modules/@clerk/nextjs/dist/esm/app-router/keyless-actions.js",
@@ -182,8 +224,14 @@
           "exportedName": "syncKeylessConfigAction",
           "filename": "node_modules/@clerk/nextjs/dist/esm/app-router/keyless-actions.js"
         },
-        "app/dashboard/page": {
-          "moduleId": 68719,
+        "app/analytics/page": {
+          "moduleId": 59365,
+          "async": false,
+          "exportedName": "syncKeylessConfigAction",
+          "filename": "node_modules/@clerk/nextjs/dist/esm/app-router/keyless-actions.js"
+        },
+        "app/anomalies/page": {
+          "moduleId": 93638,
           "async": false,
           "exportedName": "syncKeylessConfigAction",
           "filename": "node_modules/@clerk/nextjs/dist/esm/app-router/keyless-actions.js"
@@ -197,7 +245,8 @@
       },
       "layer": {
         "app/_not-found/page": "action-browser",
-        "app/dashboard/page": "action-browser",
+        "app/analytics/page": "action-browser",
+        "app/anomalies/page": "action-browser",
         "app/page": "action-browser"
       },
       "filename": "node_modules/@clerk/nextjs/dist/esm/app-router/keyless-actions.js",

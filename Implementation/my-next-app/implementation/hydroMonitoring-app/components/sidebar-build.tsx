@@ -103,14 +103,14 @@ export default function SidebarBuild() {
                                     asChild
                                     isActive={active}
                                     className={cn(
-                                        "group rounded-lg border border-sky-100 bg-white/80 px-3 py-2",
+                                        "group border border-blue-100 bg-white/80 px-3 py-2",
                                         "text-slate-800 shadow-sm transition",
-                                        "hover:border-sky-200 hover:bg-sky-50",
-                                        "data-[active=true]:border-sky-300 data-[active=true]:bg-sky-100/70 data-[active=true]:text-sky-900",
+                                        "hover:border-sky-200 hover:bg-blue-50",
+                                        "data-[active=true]:border-blue-300 data-[active=true]:bg-blue-100/70 data-[active=true]:text-blue-900",
                                     )}
                                 >
                                     <Link href={item.href}>
-                                        <Icon className="h-4 w-4 text-sky-600" />
+                                        <Icon className="h-4 w-4 text-blue-600" />
                                         {!isCollapsed && <span>{item.label}</span>}
                                     </Link>
                                 </SidebarMenuButton>
@@ -124,7 +124,7 @@ export default function SidebarBuild() {
                 <div className="rounded-lg border border-sky-100 bg-white/80 px-3 py-2 shadow-sm">
                     <SignedOut>
                         <SignInButton mode="modal">
-                            <button className="flex w-full items-center justify-center gap-2 rounded-md bg-emerald-400 px-3 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-purple-700">
+                            <button className="flex w-full items-center justify-center gap-2 rounded-md bg-emerald-400 px-3 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-sky-500">
                                 <User className="h-4 w-4" />
                                 {!isCollapsed && <span>Log in</span>}
                             </button>
