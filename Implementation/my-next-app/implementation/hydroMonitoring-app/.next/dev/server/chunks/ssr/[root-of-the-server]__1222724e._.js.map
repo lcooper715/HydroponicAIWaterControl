@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///Users/lindsayleighcooper/Documents/GitHub/HydroponicAIWaterControl/Implementation/my-next-app/implementation/hydroMonitoring-app/app/page.tsx"],"sourcesContent":["import Image from \"next/image\";\n\nexport default function Home() {\n    return (\n        <main style={{ padding: 24 }}>\n            <h1>Hydroponics Monitoring System</h1>\n            <p>It works.</p>\n        </main>\n    )\n}\n\n"],"names":[],"mappings":";;;;;;AAEe,SAAS;IACpB,qBACI,8OAAC;QAAK,OAAO;YAAE,SAAS;QAAG;;0BACvB,8OAAC;0BAAG;;;;;;0BACJ,8OAAC;0BAAE;;;;;;;;;;;;AAGf"}}]
-}

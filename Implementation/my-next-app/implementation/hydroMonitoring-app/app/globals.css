@@ -1,7 +1,8 @@
 /* app/globals.css */
-@import "tailwindcss/preflight.css";
+@import "tailwindcss";
+
 @custom-variant dark (&:is(.dark *));
-@tailwind utilities;
+
 
 @theme inline {
     --color-background: var(--background);

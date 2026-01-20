@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 58, "column": 0}, "map": {"version":3,"sources":["file:///Users/lindsayleighcooper/Documents/GitHub/HydroponicAIWaterControl/Implementation/my-next-app/implementation/hydroMonitoring-app/proxy.ts"],"sourcesContent":["// proxy.ts\nimport { clerkMiddleware, createRouteMatcher } from \"@clerk/nextjs/server\";\n\nconst isPublicRoute = createRouteMatcher([\n    \"/\",\n    \"/sign-in(.*)\",\n    \"/sign-up(.*)\",\n]);\n\nexport default clerkMiddleware(async (auth, req) => {\n    if (!isPublicRoute(req)) {\n        await auth.protect();\n    }\n});\n\nexport const config = {\n    matcher: [\n        \"/((?!.*\\\\..*|_next).*)\",\n        \"/\",\n        \"/(api|trpc)(.*)\",\n    ],\n};\n"],"names":[],"mappings":";;;;;;AAAA,WAAW;AACX;AAAA;;AAEA,MAAM,gBAAgB,IAAA,gMAAkB,EAAC;IACrC;IACA;IACA;CACH;uCAEc,IAAA,gMAAe,EAAC,OAAO,MAAM;IACxC,IAAI,CAAC,cAAc,MAAM;QACrB,MAAM,KAAK,OAAO;IACtB;AACJ;AAEO,MAAM,SAAS;IAClB,SAAS;QACL;QACA;QACA;KACH;AACL"}}]
-}
