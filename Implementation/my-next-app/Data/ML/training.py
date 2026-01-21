@@ -204,7 +204,14 @@ def main():
     out_path = os.path.join("models", "dose_controller_xgb.joblib")
     joblib.dump(artifact, out_path)
     print("Saved model artifact:", out_path)
+
+
+def main():
+    ...
+    return df
+
 if __name__ == "__main__":
-    main()
+    df = main()
     if len(df) < 1000:
         raise RuntimeError("Not enough rows to train.")
+
